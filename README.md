@@ -31,9 +31,10 @@ async {
   let result: <#AwaitCompletableType#> = try await(AwaitExecute())
   ...
 }
+
 ```
 
-
+AwaitCompletable protocol this:
 ```swift
 // AwaitCompletable
 public protocol AwaitCompletable {
@@ -45,7 +46,10 @@ public protocol AwaitCompletable {
   func should() -> Bool
 }
 
+```
 
+Custom this:
+```swift
 // Custom Await Completable
 public struct AwaitExecute: AwaitCompletable {
   public func execute(_ completion: @escaping (<#AwaitCompletableType#>) throws -> Void) {
