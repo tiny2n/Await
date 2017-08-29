@@ -75,8 +75,11 @@ async {
     let sum: String = try await(ACResultSum(odd, even))
     print(">>> sum: \(sum)")
   }
-  catch AwaitKitError.nilOrTimeout {
-    print("throw nil or timeout")
+  catch AwaitKitError.nil {
+    print("throw nil")
+  }
+  catch AwaitKitError.timeout {
+    print("throw timeout")
   }
   catch AwaitKitError.cancel {
     print("thorw await completable instace execute cancel")
