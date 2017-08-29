@@ -60,13 +60,6 @@ public struct AwaitExecute: AwaitCompletable {
   }
 }
 
-
-// async and await
-async {
-  let result: <#AwaitCompletableType#> = try await(AwaitExecute())
-	...
-}
-
 ```
 
 example this:
