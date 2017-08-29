@@ -67,11 +67,35 @@ async {
 	...
 }
 
+```
+
+example this:
+```swift
+async {
+  do {
+    let odd: Int = try await(ACSum0To1000000000Odd())
+    print(">>> odd: \(odd)")
+
+    let even: Int = try await(ACSum0To1000000000Even())
+    print(">>> even: \(even)")
+
+    let sum: String = try await(ACResultSum(odd, even))
+    print(">>> sum: \(sum)")
+  }
+  catch AwaitKitError.nilOrTimeout {
+    print("throw nil or timeout")
+  }
+  catch AwaitKitError.cancel {
+    print("thorw await completable instace execute cancel")
+  }
+  catch {
+    print("thorw unknown")
+  }
+}
 
 ```
 
-
-
+<br/><br/>
 ### The MIT License (MIT)
 
 Copyright (c) 2017 Choi Joongkwan. All rights reserved.
