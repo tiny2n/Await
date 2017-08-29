@@ -18,6 +18,10 @@ public struct ACSum0To1000000000Odd: AwaitCompletable {
         
         try? completion(sum)
     }
+    
+    public var timeout: DispatchTimeInterval? {
+        return .milliseconds(1)
+    }
 }
 
 public struct ACSum0To1000000000Even: AwaitCompletable {
@@ -53,10 +57,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         async {
             do {
-                let odd:  Int = try await(ACSum0To1000000000Odd())
+                let odd: Int = try await(ACSum0To1000000000Odd())
                 print(">>> odd: \(odd)")
                 
                 let even: Int = try await(ACSum0To1000000000Even())
@@ -65,8 +68,11 @@ class ViewController: UIViewController {
                 let sum: String = try await(ACResultSum(odd, even))
                 print(">>> sum: \(sum)")
             }
-            catch AwaitKitError.nilOrTimeout {
-                print("throw nil or timeout")
+            catch AwaitKitError.nil {
+                print("throw nil")
+            }
+            catch AwaitKitError.timeout {
+                print("throw timeout")
             }
             catch AwaitKitError.cancel {
                 print("thorw await completable instace execute cancel")

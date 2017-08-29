@@ -14,18 +14,21 @@ extension DispatchQueue {
 }
 
 extension DispatchQueue {
-    @discardableResult
     final public func await<T: AwaitCompletable, U>(_ completable: T) throws -> U {
         guard completable.should() else {
             throw AwaitKitError.cancel
         }
         
         var result: U?
+        var executed = false
         let semaphore = DispatchSemaphore(value: 0)
         
-        try completable.execute { (completable) in
-            result = completable as? U
-            semaphore.signal()
+        completable.queue.async {
+            try? completable.execute { (completable) in
+                executed = true
+                result = completable as? U
+                semaphore.signal()
+            }
         }
         
         var timeout = DispatchTime.distantFuture
@@ -39,7 +42,11 @@ extension DispatchQueue {
             return unwrapped
         }
         
-        throw AwaitKitError.nilOrTimeout
+        if executed {
+            throw AwaitKitError.nil
+        }
+        
+        throw AwaitKitError.timeout
     }
 }
 

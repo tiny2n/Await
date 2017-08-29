@@ -9,7 +9,8 @@
 import UIKit
 
 enum AwaitKitError: Error {
-    case nilOrTimeout
+    case `nil`
+    case timeout
     case cancel
     case unknown
 }
