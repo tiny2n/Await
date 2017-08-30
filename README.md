@@ -39,12 +39,12 @@ AwaitCompletable protocol this:
 // AwaitCompletable
 public protocol AwaitCompletable {
   associatedtype AwaitCompletableType
-    
-  var timeout: DispatchTimeInterval? { get }
+
   var queue: DispatchQueue { get }
-    
+  var timeout: DispatchTimeInterval? { get }
+
+  func should() -> Bool      
   func execute(_ completion: @escaping (AwaitCompletableType) throws -> Void) throws
-  func should() -> Bool
 }
 
 ```
