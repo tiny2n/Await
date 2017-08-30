@@ -41,6 +41,7 @@ public protocol AwaitCompletable {
   associatedtype AwaitCompletableType
     
   var timeout: DispatchTimeInterval? { get }
+  var queue: DispatchQueue { get }
     
   func execute(_ completion: @escaping (AwaitCompletableType) throws -> Void) throws
   func should() -> Bool
@@ -54,6 +55,7 @@ Custom this:
 public struct AwaitExecute: AwaitCompletable {
   public func execute(_ completion: @escaping (<#AwaitCompletableType#>) throws -> Void) {
     // execute work
+    // need not async block
     <#code#>
 
     try? completion(<#await completable type#>)
