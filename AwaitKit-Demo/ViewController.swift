@@ -8,7 +8,6 @@
 
 import UIKit
 
-//
 public struct ACSum0To1000000000Odd: AwaitCompletable {
     public func execute(_ completion: @escaping (Int) throws -> Void) throws {
         var sum = 0

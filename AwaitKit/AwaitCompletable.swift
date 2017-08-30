@@ -11,23 +11,23 @@ import UIKit
 public protocol AwaitCompletable {
     associatedtype AwaitCompletableType
     
-    var timeout: DispatchTimeInterval? { get }
     var queue: DispatchQueue { get }
+    var timeout: DispatchTimeInterval? { get }
     
-    func execute(_ completion: @escaping (AwaitCompletableType) throws -> Void) throws
     func should() -> Bool
+    func execute(_ completion: @escaping (AwaitCompletableType) throws -> Void) throws
 }
 
 extension AwaitCompletable {
-    public func should() -> Bool {
-        return true
+    public var queue: DispatchQueue {
+        return DispatchQueue(label: "com.tiny2n.queue.completable", attributes: .concurrent)
     }
     
     public var timeout: DispatchTimeInterval? {
         return nil
     }
     
-    public var queue: DispatchQueue {
-        return DispatchQueue(label: "com.tiny2n.queue.completable", attributes: .concurrent)
+    public func should() -> Bool {
+        return true
     }
 }
