@@ -56,6 +56,6 @@ public func async(_ block: @escaping () throws -> Void) {
     }
 }
 
-public func await<T: AwaitCompletable, U>(_ completable: T) throws -> U {
+public func await<T: AwaitCompletable>(_ completable: T) throws -> T.AwaitCompletableType {
     return try DispatchQueue.await.await(completable)
 }
