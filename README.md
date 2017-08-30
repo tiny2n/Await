@@ -68,13 +68,13 @@ example this:
 ```swift
 async {
   do {
-    let odd: Int = try await(ACSum0To1000000000Odd())
+    let odd = try await(ACSum0To1000000000Odd())
     print(">>> odd: \(odd)")
 
-    let even: Int = try await(ACSum0To1000000000Even())
+    let even = try await(ACSum0To1000000000Even())
     print(">>> even: \(even)")
 
-    let sum: String = try await(ACResultSum(odd, even))
+    let sum = try await(ACResultSum(odd, even))
     print(">>> sum: \(sum)")
   }
   catch AwaitKitError.nil {
