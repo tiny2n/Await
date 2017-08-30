@@ -18,10 +18,6 @@ public struct ACSum0To1000000000Odd: AwaitCompletable {
         
         try? completion(sum)
     }
-    
-    public var timeout: DispatchTimeInterval? {
-        return .milliseconds(1)
-    }
 }
 
 public struct ACSum0To1000000000Even: AwaitCompletable {
