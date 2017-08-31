@@ -3,12 +3,12 @@
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
 [![Platform](https://img.shields.io/cocoapods/p/DeepLinkSDK.svg?style=flat)](https://developer.apple.com/ios)
 
-<h1 align="center">AwaitKit</h1>
+<h1 align="center">Await</h1>
 
 Overview
 -------------
 Asynchronous Programming with async and await base protocol oriented programming in Swift ver. 3.x<br/>
-_AwaitKit_ is a powerful Swift library
+_Await_ is a powerful Swift library
 
 C# async and await
 https://msdn.microsoft.com/en-us//library/hh191443(v=vs.110).aspx
@@ -19,7 +19,7 @@ __Requires Swift 3 or later<br/>
 
 ### Installation
 
-Add the files to your project manually by dragging the AwaitKit directory into your Xcode project.
+Add the files to your project manually by dragging the Await directory into your Xcode project.
 
 
 ### Usage
@@ -77,13 +77,13 @@ async {
     let sum = try await(ACResultSum(odd, even))
     print(">>> sum: \(sum)")
   }
-  catch AwaitKitError.nil {
+  catch AwaitError.nil {
     print("throw nil")
   }
-  catch AwaitKitError.timeout {
+  catch AwaitError.timeout {
     print("throw timeout")
   }
-  catch AwaitKitError.cancel {
+  catch AwaitError.cancel {
     print("thorw await completable instace execute cancel")
   }
   catch {
