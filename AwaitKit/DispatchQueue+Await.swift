@@ -14,43 +14,54 @@ extension DispatchQueue {
 }
 
 extension DispatchQueue {
-    final public func await<T: AwaitCompletable, U>(_ completable: T) throws -> U {
-        guard completable.should() else {
-            throw AwaitKitError.cancel
-        }
-        
-        var result: U?
+    final public func await<T: AwaitCompletable>(_ completable: T) throws -> T.AwaitCompletableType {
+        var result: T.AwaitCompletableType?
         var executed = false
+        var error: Error?
         let semaphore = DispatchSemaphore(value: 0)
         
         completable.queue.async {
-            try? completable.execute { (completable) in
-                executed = true
-                result = completable as? U
+            do {
+                try completable.execute { (completable) in
+                    executed = true
+                    result = completable
+                    semaphore.signal()
+                }
+            }
+            catch let e {
+                error = e
                 semaphore.signal()
             }
         }
         
-        var timeout = DispatchTime.distantFuture
-        if let interval = completable.timeout {
-            timeout = DispatchTime.now() + interval
-        }
-
+        let timeout = waitingforSemaphoreTimeout(completable.timeout)
         _ = semaphore.wait(timeout: timeout)
         
         if let unwrapped = result {
             return unwrapped
         }
         
-        if executed {
+        if let error = error {
+            throw error
+        }
+        else if executed {
             throw AwaitKitError.nil
         }
         
         throw AwaitKitError.timeout
     }
+    
+    private func waitingforSemaphoreTimeout(_ timeout: DispatchTimeInterval?) -> DispatchTime {
+        var result = DispatchTime.distantFuture
+        if let interval = timeout {
+            result = DispatchTime.now() + interval
+        }
+        
+        return result
+    }
 }
 
-public func async(_ block: @escaping () throws -> Void) {
+public func async(_ block: @escaping () throws -> Void) rethrows {
     DispatchQueue.async.async {
         try? block()
     }

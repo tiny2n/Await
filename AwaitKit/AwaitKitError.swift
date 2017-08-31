@@ -11,6 +11,5 @@ import UIKit
 enum AwaitKitError: Error {
     case `nil`
     case timeout
-    case cancel
     case unknown
 }

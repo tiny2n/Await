@@ -69,9 +69,6 @@ class ViewController: UIViewController {
             catch AwaitKitError.timeout {
                 print("throw timeout")
             }
-            catch AwaitKitError.cancel {
-                print("thorw await completable instace execute cancel")
-            }
             catch {
                 print("thorw unknown")
             }
