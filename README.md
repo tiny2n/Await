@@ -7,7 +7,7 @@
 
 Overview
 -------------
-Asynchronous Programming with async and await base protocol oriented programming in Swift ver. 3.x<br/>
+Asynchronous Programming with async and await base protocol oriented programming<br/>
 _Await_ is a powerful Swift library
 
 C# async and await
