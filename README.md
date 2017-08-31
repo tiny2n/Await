@@ -72,15 +72,17 @@ public struct AwaitExecute: AwaitCompletable {
 
 example this:
 ```swift
+
+// async block is Asynchronous
+// await block is Synchronous
 async {
   do {
     let odd = try await(ACSum0To1000000000Odd())
-    print(">>> odd: \(odd)")
-
     let even = try await(ACSum0To1000000000Even())
-    print(">>> even: \(even)")
-
     let sum = try await(ACResultSum(odd, even))
+
+    print(">>> odd: \(odd)")
+    print(">>> even: \(even)")
     print(">>> sum: \(sum)")
   }
   catch AwaitError.nil {
