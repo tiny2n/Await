@@ -35,7 +35,7 @@ write this:
 ```swift
 // async and await
 async {
-  let result: <#AwaitCompletableType#> = try await(AwaitExecute())
+  let result = try await(AwaitExecute())    // AwaitCompletable Type
   ...
 }
 
