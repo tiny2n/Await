@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		058C568D1F552FF00023FDF9 /* AwaitKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C568C1F552FF00023FDF9 /* AwaitKitError.swift */; };
-		05F924991F5404100002B104 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F924981F5404100002B104 /* AppDelegate.swift */; };
-		05F9249B1F5404100002B104 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9249A1F5404100002B104 /* ViewController.swift */; };
-		05F9249E1F5404100002B104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05F9249C1F5404100002B104 /* Main.storyboard */; };
-		05F924A01F5404100002B104 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05F9249F1F5404100002B104 /* Assets.xcassets */; };
-		05F924A31F5404100002B104 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05F924A11F5404100002B104 /* LaunchScreen.storyboard */; };
-		05F924AC1F54193A0002B104 /* DispatchQueue+Await.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F924AB1F54193A0002B104 /* DispatchQueue+Await.swift */; };
-		05F924AE1F5419700002B104 /* AwaitCompletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F924AD1F5419700002B104 /* AwaitCompletable.swift */; };
+		059F03661F57C3FF00139236 /* AwaitCompletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059F035A1F57C3FF00139236 /* AwaitCompletable.swift */; };
+		059F03671F57C3FF00139236 /* AwaitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059F035B1F57C3FF00139236 /* AwaitError.swift */; };
+		059F03681F57C3FF00139236 /* DispatchQueue+Await.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059F035C1F57C3FF00139236 /* DispatchQueue+Await.swift */; };
+		059F03691F57C3FF00139236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059F035E1F57C3FF00139236 /* AppDelegate.swift */; };
+		059F036A1F57C3FF00139236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059F035F1F57C3FF00139236 /* Assets.xcassets */; };
+		059F036B1F57C3FF00139236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059F03601F57C3FF00139236 /* LaunchScreen.storyboard */; };
+		059F036C1F57C3FF00139236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059F03621F57C3FF00139236 /* Main.storyboard */; };
+		059F036E1F57C3FF00139236 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059F03651F57C3FF00139236 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		058C568C1F552FF00023FDF9 /* AwaitKitError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitKitError.swift; sourceTree = "<group>"; };
-		05F924951F5404100002B104 /* AwaitKit-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AwaitKit-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		05F924981F5404100002B104 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		05F9249A1F5404100002B104 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		05F9249D1F5404100002B104 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		05F9249F1F5404100002B104 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		05F924A21F5404100002B104 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		05F924A41F5404100002B104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		05F924AB1F54193A0002B104 /* DispatchQueue+Await.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Await.swift"; sourceTree = "<group>"; };
-		05F924AD1F5419700002B104 /* AwaitCompletable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitCompletable.swift; sourceTree = "<group>"; };
+		059F035A1F57C3FF00139236 /* AwaitCompletable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitCompletable.swift; sourceTree = "<group>"; };
+		059F035B1F57C3FF00139236 /* AwaitError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitError.swift; sourceTree = "<group>"; };
+		059F035C1F57C3FF00139236 /* DispatchQueue+Await.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Await.swift"; sourceTree = "<group>"; };
+		059F035E1F57C3FF00139236 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		059F035F1F57C3FF00139236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		059F03611F57C3FF00139236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		059F03631F57C3FF00139236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		059F03641F57C3FF00139236 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		059F03651F57C3FF00139236 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05F924951F5404100002B104 /* Await-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Await-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,11 +41,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		059F03591F57C3FF00139236 /* Await */ = {
+			isa = PBXGroup;
+			children = (
+				059F035C1F57C3FF00139236 /* DispatchQueue+Await.swift */,
+				059F035A1F57C3FF00139236 /* AwaitCompletable.swift */,
+				059F035B1F57C3FF00139236 /* AwaitError.swift */,
+			);
+			path = Await;
+			sourceTree = "<group>";
+		};
+		059F035D1F57C3FF00139236 /* Await-Demo */ = {
+			isa = PBXGroup;
+			children = (
+				059F035E1F57C3FF00139236 /* AppDelegate.swift */,
+				059F03651F57C3FF00139236 /* ViewController.swift */,
+				059F035F1F57C3FF00139236 /* Assets.xcassets */,
+				059F03601F57C3FF00139236 /* LaunchScreen.storyboard */,
+				059F03621F57C3FF00139236 /* Main.storyboard */,
+				059F03641F57C3FF00139236 /* Info.plist */,
+			);
+			path = "Await-Demo";
+			sourceTree = "<group>";
+		};
 		05F9248C1F5404100002B104 = {
 			isa = PBXGroup;
 			children = (
-				05F924AA1F54192B0002B104 /* AwaitKit */,
-				05F924971F5404100002B104 /* AwaitKit-Demo */,
+				059F03591F57C3FF00139236 /* Await */,
+				059F035D1F57C3FF00139236 /* Await-Demo */,
 				05F924961F5404100002B104 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,40 +76,17 @@
 		05F924961F5404100002B104 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05F924951F5404100002B104 /* AwaitKit-Demo.app */,
+				05F924951F5404100002B104 /* Await-Demo.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		05F924971F5404100002B104 /* AwaitKit-Demo */ = {
-			isa = PBXGroup;
-			children = (
-				05F924981F5404100002B104 /* AppDelegate.swift */,
-				05F9249A1F5404100002B104 /* ViewController.swift */,
-				05F9249C1F5404100002B104 /* Main.storyboard */,
-				05F9249F1F5404100002B104 /* Assets.xcassets */,
-				05F924A11F5404100002B104 /* LaunchScreen.storyboard */,
-				05F924A41F5404100002B104 /* Info.plist */,
-			);
-			path = "AwaitKit-Demo";
-			sourceTree = "<group>";
-		};
-		05F924AA1F54192B0002B104 /* AwaitKit */ = {
-			isa = PBXGroup;
-			children = (
-				05F924AB1F54193A0002B104 /* DispatchQueue+Await.swift */,
-				05F924AD1F5419700002B104 /* AwaitCompletable.swift */,
-				058C568C1F552FF00023FDF9 /* AwaitKitError.swift */,
-			);
-			path = AwaitKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		05F924941F5404100002B104 /* AwaitKit-Demo */ = {
+		05F924941F5404100002B104 /* Await-Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 05F924A71F5404100002B104 /* Build configuration list for PBXNativeTarget "AwaitKit-Demo" */;
+			buildConfigurationList = 05F924A71F5404100002B104 /* Build configuration list for PBXNativeTarget "Await-Demo" */;
 			buildPhases = (
 				05F924911F5404100002B104 /* Sources */,
 				05F924921F5404100002B104 /* Frameworks */,
@@ -96,9 +96,9 @@
 			);
 			dependencies = (
 			);
-			name = "AwaitKit-Demo";
+			name = "Await-Demo";
 			productName = "AwaitKit-Demo";
-			productReference = 05F924951F5404100002B104 /* AwaitKit-Demo.app */;
+			productReference = 05F924951F5404100002B104 /* Await-Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -118,7 +118,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 05F924901F5404100002B104 /* Build configuration list for PBXProject "AwaitKit-Demo" */;
+			buildConfigurationList = 05F924901F5404100002B104 /* Build configuration list for PBXProject "Await-Demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -131,7 +131,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				05F924941F5404100002B104 /* AwaitKit-Demo */,
+				05F924941F5404100002B104 /* Await-Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -141,9 +141,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05F924A31F5404100002B104 /* LaunchScreen.storyboard in Resources */,
-				05F924A01F5404100002B104 /* Assets.xcassets in Resources */,
-				05F9249E1F5404100002B104 /* Main.storyboard in Resources */,
+				059F036C1F57C3FF00139236 /* Main.storyboard in Resources */,
+				059F036A1F57C3FF00139236 /* Assets.xcassets in Resources */,
+				059F036B1F57C3FF00139236 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,31 +154,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05F9249B1F5404100002B104 /* ViewController.swift in Sources */,
-				05F924AC1F54193A0002B104 /* DispatchQueue+Await.swift in Sources */,
-				05F924991F5404100002B104 /* AppDelegate.swift in Sources */,
-				05F924AE1F5419700002B104 /* AwaitCompletable.swift in Sources */,
-				058C568D1F552FF00023FDF9 /* AwaitKitError.swift in Sources */,
+				059F036E1F57C3FF00139236 /* ViewController.swift in Sources */,
+				059F03691F57C3FF00139236 /* AppDelegate.swift in Sources */,
+				059F03671F57C3FF00139236 /* AwaitError.swift in Sources */,
+				059F03681F57C3FF00139236 /* DispatchQueue+Await.swift in Sources */,
+				059F03661F57C3FF00139236 /* AwaitCompletable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		05F9249C1F5404100002B104 /* Main.storyboard */ = {
+		059F03601F57C3FF00139236 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				05F9249D1F5404100002B104 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		05F924A11F5404100002B104 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				05F924A21F5404100002B104 /* Base */,
+				059F03611F57C3FF00139236 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		059F03621F57C3FF00139236 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				059F03631F57C3FF00139236 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -282,9 +282,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PCAKRK678S;
-				INFOPLIST_FILE = "AwaitKit-Demo/Info.plist";
+				INFOPLIST_FILE = "Await-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tiny2n.AwaitKit-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiny2n.Await-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -295,9 +295,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PCAKRK678S;
-				INFOPLIST_FILE = "AwaitKit-Demo/Info.plist";
+				INFOPLIST_FILE = "Await-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tiny2n.AwaitKit-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiny2n.Await-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -306,7 +306,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		05F924901F5404100002B104 /* Build configuration list for PBXProject "AwaitKit-Demo" */ = {
+		05F924901F5404100002B104 /* Build configuration list for PBXProject "Await-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05F924A51F5404100002B104 /* Debug */,
@@ -315,7 +315,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		05F924A71F5404100002B104 /* Build configuration list for PBXNativeTarget "AwaitKit-Demo" */ = {
+		05F924A71F5404100002B104 /* Build configuration list for PBXNativeTarget "Await-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05F924A81F5404100002B104 /* Debug */,

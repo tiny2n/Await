@@ -1,6 +1,6 @@
 //
 //  DispatchQueue+Await.swift
-//  AwaitKit
+//  Await
 //
 //  Created by Choi Joongkwan on 2017. 8. 28..
 //  Copyright © 2017년 tiny2n. All rights reserved.
@@ -46,10 +46,10 @@ extension DispatchQueue {
             throw error
         }
         else if executed {
-            throw AwaitKitError.nil
+            throw AwaitError.nil
         }
         
-        throw AwaitKitError.timeout
+        throw AwaitError.timeout
     }
     
     private func waitingforTimeout(_ timeout: DispatchTimeInterval?) -> DispatchTime {

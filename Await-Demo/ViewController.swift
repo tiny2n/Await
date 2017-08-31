@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  AwaitKit-Demo
+//  Await-Demo
 //
 //  Created by Choi Joongkwan on 2017. 8. 28..
 //  Copyright © 2017년 tiny2n. All rights reserved.
@@ -63,10 +63,10 @@ class ViewController: UIViewController {
                 let sum = try await(ACResultSum(odd, even))
                 print(">>> sum: \(sum)")
             }
-            catch AwaitKitError.nil {
+            catch AwaitError.nil {
                 print("throw nil")
             }
-            catch AwaitKitError.timeout {
+            catch AwaitError.timeout {
                 print("throw timeout")
             }
             catch {

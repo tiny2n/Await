@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:AwaitKit-Demo.xcodeproj">
+      location = "self:/Users/dean/Documents/development/tiny2n/AwaitKit/Await-Demo.xcodeproj">
    </FileRef>
 </Workspace>

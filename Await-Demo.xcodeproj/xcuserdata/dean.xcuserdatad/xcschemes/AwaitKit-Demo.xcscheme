@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "05F924941F5404100002B104"
-               BuildableName = "AwaitKit-Demo.app"
-               BlueprintName = "AwaitKit-Demo"
-               ReferencedContainer = "container:AwaitKit-Demo.xcodeproj">
+               BuildableName = "Await-Demo.app"
+               BlueprintName = "Await-Demo"
+               ReferencedContainer = "container:Await-Demo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "05F924941F5404100002B104"
-            BuildableName = "AwaitKit-Demo.app"
-            BlueprintName = "AwaitKit-Demo"
-            ReferencedContainer = "container:AwaitKit-Demo.xcodeproj">
+            BuildableName = "Await-Demo.app"
+            BlueprintName = "Await-Demo"
+            ReferencedContainer = "container:Await-Demo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "05F924941F5404100002B104"
-            BuildableName = "AwaitKit-Demo.app"
-            BlueprintName = "AwaitKit-Demo"
-            ReferencedContainer = "container:AwaitKit-Demo.xcodeproj">
+            BuildableName = "Await-Demo.app"
+            BlueprintName = "Await-Demo"
+            ReferencedContainer = "container:Await-Demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "05F924941F5404100002B104"
-            BuildableName = "AwaitKit-Demo.app"
-            BlueprintName = "AwaitKit-Demo"
-            ReferencedContainer = "container:AwaitKit-Demo.xcodeproj">
+            BuildableName = "Await-Demo.app"
+            BlueprintName = "Await-Demo"
+            ReferencedContainer = "container:Await-Demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
