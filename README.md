@@ -21,6 +21,11 @@ __Requires Swift 3 or later<br/>
 
 Add the files to your project manually by dragging the Await directory into your Xcode project.
 
+with [CocoaPods](https://cocoapods.org):
+
+```ruby
+pod 'Await', :git => 'https://github.com/tiny2n/Await.git'
+```
 
 ### Usage
 
