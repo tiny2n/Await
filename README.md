@@ -43,7 +43,6 @@ public protocol AwaitCompletable {
   var queue: DispatchQueue { get }
   var timeout: DispatchTimeInterval? { get }
 
-  func should() -> Bool      
   func execute(_ completion: @escaping (AwaitCompletableType) throws -> Void) throws
 }
 
