@@ -62,12 +62,10 @@ extension DispatchQueue {
     }
 }
 
-public func async(_ block: @escaping () throws -> Void) {
-    DispatchQueue.async.async {
-        try? block()
-    }
-}
-
 public func await<T: AwaitCompletable>(_ completable: T) throws -> T.AwaitCompletableType {
     return try DispatchQueue.await.await(completable)
+}
+
+public func async(_ block: @escaping () -> Void) {
+    DispatchQueue.async.async { block() }
 }

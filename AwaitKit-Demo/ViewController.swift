@@ -9,7 +9,7 @@
 import UIKit
 
 public struct ACSum0To1000000000Odd: AwaitCompletable {
-    public func execute(_ completion: @escaping (Int) throws -> Void) throws {
+    public func execute(_ completion: @escaping (Int) throws -> Void) {
         var sum = 0
         for i in 0...1000000000 where i % 2 == 1 {
             sum += i
