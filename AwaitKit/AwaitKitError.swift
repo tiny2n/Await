@@ -8,8 +8,10 @@
 
 import UIKit
 
-enum AwaitKitError: Error {
+public protocol AwaitError: Error {
+}
+
+public enum AwaitKitError: AwaitError {
     case `nil`
     case timeout
-    case unknown
 }

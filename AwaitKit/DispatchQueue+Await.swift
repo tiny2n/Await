@@ -34,14 +34,15 @@ extension DispatchQueue {
             }
         }
         
-        let timeout = waitingforSemaphoreTimeout(completable.timeout)
+        // waiting for semaphore signal
+        let timeout = waitingforTimeout(completable.timeout)
         _ = semaphore.wait(timeout: timeout)
         
+        // return result or throws error
         if let unwrapped = result {
             return unwrapped
         }
-        
-        if let error = error {
+        else if let error = error {
             throw error
         }
         else if executed {
@@ -51,7 +52,7 @@ extension DispatchQueue {
         throw AwaitKitError.timeout
     }
     
-    private func waitingforSemaphoreTimeout(_ timeout: DispatchTimeInterval?) -> DispatchTime {
+    private func waitingforTimeout(_ timeout: DispatchTimeInterval?) -> DispatchTime {
         var result = DispatchTime.distantFuture
         if let interval = timeout {
             result = DispatchTime.now() + interval
@@ -61,7 +62,7 @@ extension DispatchQueue {
     }
 }
 
-public func async(_ block: @escaping () throws -> Void) rethrows {
+public func async(_ block: @escaping () throws -> Void) {
     DispatchQueue.async.async {
         try? block()
     }
