@@ -91,9 +91,6 @@ async {
   catch AwaitError.timeout {
     print("throw timeout")
   }
-  catch AwaitError.cancel {
-    print("thorw await completable instace execute cancel")
-  }
   catch {
     print("thorw unknown")
   }
