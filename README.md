@@ -65,6 +65,8 @@ public struct AwaitExecute: AwaitCompletable {
     <#code#>
 
     try? completion(<#await completable type#>)
+    // or
+    // throw AwaitError or Custom Error
   }
 }
 
