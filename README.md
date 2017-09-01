@@ -60,8 +60,9 @@ Custom this:
 // Custom Await Completable
 public struct AwaitExecute: AwaitCompletable {
   public func execute(_ completion: @escaping (<#AwaitCompletableType#>) throws -> Void) {
+    // No asynchronous blocks are needed.
     // execute work
-    // need not async block
+    
     <#code#>
 
     try? completion(<#await completable type#>)
