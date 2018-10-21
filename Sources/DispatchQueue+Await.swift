@@ -6,7 +6,7 @@
 //  Copyright © 2017년 tiny2n. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 extension DispatchQueue {
     static let async = DispatchQueue(label: "com.tiny2n.queue.async", attributes: .concurrent)
