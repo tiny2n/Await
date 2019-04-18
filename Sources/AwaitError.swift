@@ -9,6 +9,6 @@
 import Foundation
 
 public enum AwaitError: Error {
-    case `nil`
+    case failure(Error)
     case timeout
 }
