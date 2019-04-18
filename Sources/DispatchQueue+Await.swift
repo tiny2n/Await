@@ -6,32 +6,29 @@
 //  Copyright © 2017년 tiny2n. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-extension DispatchQueue {
-    static let async = DispatchQueue(label: "com.tiny2n.queue.async", attributes: .concurrent)
-    static let await = DispatchQueue(label: "com.tiny2n.queue.await", attributes: .concurrent)
-}
+private let async = DispatchQueue(label: "com.navercafe.queue.async", attributes: .concurrent)
+private let await = DispatchQueue(label: "com.navercafe.queue.await", attributes: .concurrent)
 
 extension DispatchQueue {
     final public func await<T: AwaitCompletable>(_ completable: T) throws -> T.AwaitCompletableType {
         var result: T.AwaitCompletableType?
-        var executed = false
         var error: Error?
         let semaphore = DispatchSemaphore(value: 0)
         
         completable.queue.async {
-            do {
-                try completable.execute { (completable) in
-                    executed = true
-                    result = completable
-                    semaphore.signal()
+            completable.execute({ (execute) in
+                if case .success(let response) = execute {
+                    result = response
+                } else if case .failure(let err) = execute {
+                    error = err
+                } else {
+                    fatalError("fatal Error")
                 }
-            }
-            catch let e {
-                error = e
+                
                 semaphore.signal()
-            }
+            })
         }
         
         // waiting for semaphore signal
@@ -41,15 +38,11 @@ extension DispatchQueue {
         // return result or throws error
         if let unwrapped = result {
             return unwrapped
+        } else if let error = error {
+            throw AwaitError.failure(error)
+        } else {
+            throw AwaitError.timeout
         }
-        else if let error = error {
-            throw error
-        }
-        else if executed {
-            throw AwaitError.nil
-        }
-        
-        throw AwaitError.timeout
     }
     
     private func waitingforTimeout(_ timeout: DispatchTimeInterval?) -> DispatchTime {
@@ -63,9 +56,9 @@ extension DispatchQueue {
 }
 
 public func await<T: AwaitCompletable>(_ completable: T) throws -> T.AwaitCompletableType {
-    return try DispatchQueue.await.await(completable)
+    return try await.await(completable)
 }
 
 public func async(_ block: @escaping () -> Void) {
-    DispatchQueue.async.async { block() }
+    async.async { block() }
 }
