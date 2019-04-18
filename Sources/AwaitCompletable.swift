@@ -6,7 +6,7 @@
 //  Copyright © 2017년 tiny2n. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public enum AwaitCompletableResult<T> {
     case success(T)
