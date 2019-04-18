@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE19F74322687434009FD89C /* AwaitCompletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE323C322268741F003B49D2 /* AwaitCompletable.swift */; };
+		CE19F74422687436009FD89C /* DispatchQueue+Await.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE323C332268741F003B49D2 /* DispatchQueue+Await.swift */; };
+		CE19F74522687438009FD89C /* AwaitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE323C342268741F003B49D2 /* AwaitError.swift */; };
 		CE323C2422686F33003B49D2 /* Await.h in Headers */ = {isa = PBXBuildFile; fileRef = CE323C2222686F33003B49D2 /* Await.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE323C2E22686F60003B49D2 /* AwaitCompletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE323C2B22686F60003B49D2 /* AwaitCompletable.swift */; };
-		CE323C2F22686F60003B49D2 /* DispatchQueue+Await.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE323C2C22686F60003B49D2 /* DispatchQueue+Await.swift */; };
-		CE323C3022686F60003B49D2 /* AwaitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE323C2D22686F60003B49D2 /* AwaitError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE323C1F22686F33003B49D2 /* Await.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Await.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE323C2222686F33003B49D2 /* Await.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Await.h; sourceTree = "<group>"; };
 		CE323C2322686F33003B49D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE323C2B22686F60003B49D2 /* AwaitCompletable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitCompletable.swift; sourceTree = "<group>"; };
-		CE323C2C22686F60003B49D2 /* DispatchQueue+Await.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Await.swift"; sourceTree = "<group>"; };
-		CE323C2D22686F60003B49D2 /* AwaitError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitError.swift; sourceTree = "<group>"; };
+		CE323C322268741F003B49D2 /* AwaitCompletable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwaitCompletable.swift; sourceTree = "<group>"; };
+		CE323C332268741F003B49D2 /* DispatchQueue+Await.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Await.swift"; sourceTree = "<group>"; };
+		CE323C342268741F003B49D2 /* AwaitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwaitError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +37,7 @@
 			isa = PBXGroup;
 			children = (
 				CE323C2122686F33003B49D2 /* Await */,
-				CE323C2A22686F60003B49D2 /* Sources */,
+				CE323C312268741F003B49D2 /* Sources */,
 				CE323C2022686F33003B49D2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,12 +59,12 @@
 			path = Await;
 			sourceTree = "<group>";
 		};
-		CE323C2A22686F60003B49D2 /* Sources */ = {
+		CE323C312268741F003B49D2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				CE323C2B22686F60003B49D2 /* AwaitCompletable.swift */,
-				CE323C2C22686F60003B49D2 /* DispatchQueue+Await.swift */,
-				CE323C2D22686F60003B49D2 /* AwaitError.swift */,
+				CE323C322268741F003B49D2 /* AwaitCompletable.swift */,
+				CE323C332268741F003B49D2 /* DispatchQueue+Await.swift */,
+				CE323C342268741F003B49D2 /* AwaitError.swift */,
 			);
 			name = Sources;
 			path = ../Sources;
@@ -148,9 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE323C2F22686F60003B49D2 /* DispatchQueue+Await.swift in Sources */,
-				CE323C2E22686F60003B49D2 /* AwaitCompletable.swift in Sources */,
-				CE323C3022686F60003B49D2 /* AwaitError.swift in Sources */,
+				CE19F74422687436009FD89C /* DispatchQueue+Await.swift in Sources */,
+				CE19F74322687434009FD89C /* AwaitCompletable.swift in Sources */,
+				CE19F74522687438009FD89C /* AwaitError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
