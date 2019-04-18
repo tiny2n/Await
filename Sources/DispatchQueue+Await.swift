@@ -6,7 +6,7 @@
 //  Copyright © 2017년 tiny2n. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 private let async = DispatchQueue(label: "com.navercafe.queue.async", attributes: .concurrent)
 private let await = DispatchQueue(label: "com.navercafe.queue.await", attributes: .concurrent)
