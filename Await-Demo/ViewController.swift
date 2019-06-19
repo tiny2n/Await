@@ -9,29 +9,35 @@
 import UIKit
 
 public struct ACSum0To1000000000Odd: AwaitCompletable {
-    public func execute(_ completion: @escaping (Int) throws -> Void) {
+    public var timeout: DispatchTimeInterval?
+    
+    public func execute(_ completion: @escaping (AwaitCompletableResult<Int>) -> Void) {
         var sum = 0
         for i in 0...1000000000 where i % 2 == 1 {
             sum += i
         }
         
-        try? completion(sum)
+        completion(.success(sum))
     }
 }
 
 public struct ACSum0To1000000000Even: AwaitCompletable {
-    public func execute(_ completion: @escaping (Int) throws -> Void) {
+    public var timeout: DispatchTimeInterval?
+    
+    public func execute(_ completion: @escaping (AwaitCompletableResult<Int>) -> Void) {
         var sum = 0
         for i in 0...1000000000 where i % 2 == 0 {
             sum += i
         }
         
-        try? completion(sum)
+        completion(.success(sum))
     }
 }
 
 
 public struct ACResultSum: AwaitCompletable {
+    public var timeout: DispatchTimeInterval?
+    
     private var odd: Int
     private var even: Int
     
@@ -40,9 +46,9 @@ public struct ACResultSum: AwaitCompletable {
         self.even = even
     }
     
-    public func execute(_ completion: @escaping (String) throws -> Void) {
+    public func execute(_ completion: @escaping (AwaitCompletableResult<String>) -> Void) {
         let sum = odd + even
-        try? completion(sum.description)
+        completion(.success(sum.description))
     }
 }
 
@@ -60,13 +66,10 @@ class ViewController: UIViewController {
                 let odd = try await(ACSum0To1000000000Odd())
                 let even = try await(ACSum0To1000000000Even())
                 let sum = try await(ACResultSum(odd, even))
-                
+
                 print(">>> odd: \(odd)")
                 print(">>> even: \(even)")
                 print(">>> sum: \(sum)")
-            }
-            catch AwaitError.nil {
-                print("throw nil")
             }
             catch AwaitError.timeout {
                 print("throw timeout")
