@@ -24,6 +24,6 @@ public protocol AwaitCompletable {
 
 extension AwaitCompletable {
     public var queue: DispatchQueue {
-        return DispatchQueue(label: "com.navercafe.queue.completable", attributes: .concurrent)
+        return DispatchQueue(label: "com.tiny2n.await.queue.completable", attributes: .concurrent)
     }
 }

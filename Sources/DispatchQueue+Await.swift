@@ -8,8 +8,8 @@
 
 import Foundation
 
-private let async = DispatchQueue(label: "com.navercafe.queue.async", attributes: .concurrent)
-private let await = DispatchQueue(label: "com.navercafe.queue.await", attributes: .concurrent)
+private let async = DispatchQueue(label: "com.tiny2n.await.queue.async", attributes: .concurrent)
+private let await = DispatchQueue(label: "com.tiny2n.await.queue.await", attributes: .concurrent)
 
 extension DispatchQueue {
     final public func await<T: AwaitCompletable>(_ completable: T) throws -> T.AwaitCompletableType {
@@ -19,12 +19,11 @@ extension DispatchQueue {
         
         completable.queue.async {
             completable.execute({ (execute) in
-                if case .success(let response) = execute {
+                switch execute {
+                case let .success(response):
                     result = response
-                } else if case .failure(let err) = execute {
+                case let .failure(err):
                     error = err
-                } else {
-                    fatalError("fatal Error")
                 }
                 
                 semaphore.signal()
@@ -46,9 +45,9 @@ extension DispatchQueue {
     }
     
     private func waitingforTimeout(_ timeout: DispatchTimeInterval?) -> DispatchTime {
-        var result = DispatchTime.distantFuture
-        if let interval = timeout {
-            result = DispatchTime.now() + interval
+        var result: DispatchTime = .distantFuture
+        if let timeout = timeout {
+            result = .now() + timeout
         }
         
         return result
