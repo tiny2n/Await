@@ -6,6 +6,6 @@ Pod::Spec.new do |s|
   s.license               = { :type => "MIT", :file => "LICENSE" }
   s.author                = { "dean.w" => "dean.w@kakaocorp.com" }
 	s.source                = { :git => "https://github.com/tiny2n/Await.git", :tag => s.version }
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
   s.source_files          = "Sources/*.swift"
 end
