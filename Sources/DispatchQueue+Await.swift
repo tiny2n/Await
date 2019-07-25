@@ -2,28 +2,28 @@
 //  DispatchQueue+Await.swift
 //  Await
 //
-//  Created by Choi Joongkwan on 2017. 8. 28..
-//  Copyright © 2017년 tiny2n. All rights reserved.
+//  Created by joongkwan.choi on 2017. 8. 28..
+//  Copyright © 2017 tiny2n. All rights reserved.
 //
 
 import Foundation
 
-private let async = DispatchQueue(label: "com.tiny2n.await.queue.async", attributes: .concurrent)
-private let await = DispatchQueue(label: "com.tiny2n.await.queue.await", attributes: .concurrent)
+public let async = DispatchQueue(label: "com.tiny2n.await.queue.async", attributes: .concurrent)
+public let await = DispatchQueue(label: "com.tiny2n.await.queue.await", attributes: .concurrent)
 
 extension DispatchQueue {
+    
     final public func await<T: AwaitCompletable>(_ completable: T) throws -> T.AwaitCompletableType {
-        var result: T.AwaitCompletableType?
-        var error: Error?
+        var result: Result<T.AwaitCompletableType, Error> = .failure(AwaitError.timeout)
         let semaphore = DispatchSemaphore(value: 0)
         
         completable.queue.async {
             completable.execute({ (execute) in
                 switch execute {
                 case let .success(response):
-                    result = response
-                case let .failure(err):
-                    error = err
+                    result = .success(response)
+                case let .failure(error):
+                    result = .failure(error)
                 }
                 
                 semaphore.signal()
@@ -35,12 +35,11 @@ extension DispatchQueue {
         _ = semaphore.wait(timeout: timeout)
         
         // return result or throws error
-        if let unwrapped = result {
-            return unwrapped
-        } else if let error = error {
-            throw AwaitError.failure(error)
-        } else {
-            throw AwaitError.timeout
+        switch result {
+        case .success(let value):
+            return value
+        case .failure(let error):
+            throw error
         }
     }
     
