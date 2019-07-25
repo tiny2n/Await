@@ -50,7 +50,7 @@ public protocol AwaitCompletable {
   var queue: DispatchQueue { get }
   var timeout: DispatchTimeInterval? { get }
 
-  func execute(_ completion: @escaping (AwaitCompletableType) throws -> Void) throws
+  func execute(_ completion: @escaping (AwaitCompletableResult<AwaitCompletableType>) -> Void)
 }
 
 ```
@@ -59,7 +59,7 @@ Custom this:
 ```swift
 // Custom Await Completable
 public struct AwaitExecute: AwaitCompletable {
-  public func execute(_ completion: @escaping (<#AwaitCompletableType#>) throws -> Void) /* throws */ {
+  func execute(_ completion: @escaping (AwaitCompletableResult<AwaitCompletableType>) -> Void) {
     // No asynchronous blocks are needed.
     // execute work
     
@@ -78,6 +78,8 @@ example this:
 
 // async block is Asynchronous
 // await block is Synchronous
+
+// serial call
 async {
   do {
     let odd = try await(ACSum0To1000000000Odd())
@@ -99,6 +101,24 @@ async {
   }
 }
 
+```
+
+```swift
+// using subclassing by class AwaitConcurrentSupport<T>
+// concurrent call
+async {
+  do {
+    let result = try await(ACSum0To1000000000Even(), ACSum0To1000000000Odd())
+    print(">>> count: \(result.count)")
+    print(">>> even: \(result[1])")
+    print(">>> odd: \(result[0])")
+  }
+   catch {
+    // Type: AwaitConcurrentError.concurrent<T>
+    print("[Error] \(error)")
+  }
+}
+        
 ```
 
 <br/><br/>
