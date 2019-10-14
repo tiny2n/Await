@@ -15,6 +15,7 @@
 		059F036B1F57C3FF00139236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059F03601F57C3FF00139236 /* LaunchScreen.storyboard */; };
 		059F036C1F57C3FF00139236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059F03621F57C3FF00139236 /* Main.storyboard */; };
 		059F036E1F57C3FF00139236 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059F03651F57C3FF00139236 /* ViewController.swift */; };
+		8A82B06D2354C72E00B6881D /* AwaitTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A82B06C2354C72E00B6881D /* AwaitTask.swift */; };
 		CEB4CB5E22E94905005B1171 /* AwaitConcurrentSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4CB5D22E94905005B1171 /* AwaitConcurrentSupport.swift */; };
 		CEB4CB6022E94935005B1171 /* DispatchQueue+AwaitConcurrentSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4CB5F22E94935005B1171 /* DispatchQueue+AwaitConcurrentSupport.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		059F03641F57C3FF00139236 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		059F03651F57C3FF00139236 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		05F924951F5404100002B104 /* Await-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Await-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A82B06C2354C72E00B6881D /* AwaitTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwaitTask.swift; sourceTree = "<group>"; };
 		CEB4CB5D22E94905005B1171 /* AwaitConcurrentSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitConcurrentSupport.swift; sourceTree = "<group>"; };
 		CEB4CB5F22E94935005B1171 /* DispatchQueue+AwaitConcurrentSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+AwaitConcurrentSupport.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,6 +50,7 @@
 		055E021F1F57C9CD0015462C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8A82B06C2354C72E00B6881D /* AwaitTask.swift */,
 				055E02211F57C9CD0015462C /* AwaitError.swift */,
 				055E02201F57C9CD0015462C /* AwaitCompletable.swift */,
 				CEB4CB5D22E94905005B1171 /* AwaitConcurrentSupport.swift */,
@@ -160,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A82B06D2354C72E00B6881D /* AwaitTask.swift in Sources */,
 				059F036E1F57C3FF00139236 /* ViewController.swift in Sources */,
 				CEB4CB5E22E94905005B1171 /* AwaitConcurrentSupport.swift in Sources */,
 				059F03691F57C3FF00139236 /* AppDelegate.swift in Sources */,
@@ -315,6 +319,7 @@
 				DEVELOPMENT_TEAM = PCAKRK678S;
 				INFOPLIST_FILE = "Await-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tiny2n.Await-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -329,6 +334,7 @@
 				DEVELOPMENT_TEAM = PCAKRK678S;
 				INFOPLIST_FILE = "Await-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tiny2n.Await-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
