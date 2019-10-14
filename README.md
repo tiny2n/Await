@@ -58,16 +58,14 @@ public protocol AwaitCompletable {
 Custom this:
 ```swift
 // Custom Await Completable
-public struct AwaitExecute: AwaitCompletable {
+public struct AsyncObjectTask: AwaitCompletable {
   func execute(_ completion: @escaping (AwaitCompletableResult<AwaitCompletableType>) -> Void) {
-    // No asynchronous blocks are needed.
-    // execute work
+    // execute task
     
-    <#code#>
+    <#async code#>
 
-    try? completion(<#await completable type#>)
-    // or
-    // throw AwaitError or Custom Error
+    completion(.success(<#await completable type#>))
+    // or completion(.failure(<#error#>))
   }
 }
 
