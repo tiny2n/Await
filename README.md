@@ -1,10 +1,3 @@
-
-
-[![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
-[![Platform](https://img.shields.io/cocoapods/p/DeepLinkSDK.svg?style=flat)](https://developer.apple.com/ios)
-
-<h1 align="center">Await</h1>
-
 Overview
 -------------
 Asynchronous Programming with async and await base protocol oriented programming<br/>
@@ -118,8 +111,6 @@ async {
 }
         
 ```
-
-<br/><br/>
 ### License
 
 **Await** is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
