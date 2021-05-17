@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A587B94265232CE0068495F /* AwaitTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A587B93265232CE0068495F /* AwaitTask.swift */; };
 		CE19F74322687434009FD89C /* AwaitCompletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE323C322268741F003B49D2 /* AwaitCompletable.swift */; };
 		CE19F74422687436009FD89C /* DispatchQueue+Await.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE323C332268741F003B49D2 /* DispatchQueue+Await.swift */; };
 		CE19F74522687438009FD89C /* AwaitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE323C342268741F003B49D2 /* AwaitError.swift */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A587B93265232CE0068495F /* AwaitTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitTask.swift; sourceTree = "<group>"; };
 		CE323C1F22686F33003B49D2 /* Await.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Await.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE323C2222686F33003B49D2 /* Await.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Await.h; sourceTree = "<group>"; };
 		CE323C2322686F33003B49D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,9 +64,10 @@
 		CE323C312268741F003B49D2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8A587B93265232CE0068495F /* AwaitTask.swift */,
+				CE323C342268741F003B49D2 /* AwaitError.swift */,
 				CE323C322268741F003B49D2 /* AwaitCompletable.swift */,
 				CE323C332268741F003B49D2 /* DispatchQueue+Await.swift */,
-				CE323C342268741F003B49D2 /* AwaitError.swift */,
 			);
 			name = Sources;
 			path = ../Sources;
@@ -151,6 +154,7 @@
 				CE19F74422687436009FD89C /* DispatchQueue+Await.swift in Sources */,
 				CE19F74322687434009FD89C /* AwaitCompletable.swift in Sources */,
 				CE19F74522687438009FD89C /* AwaitError.swift in Sources */,
+				8A587B94265232CE0068495F /* AwaitTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +286,7 @@
 		CE323C2822686F33003B49D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -297,6 +302,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiny2n.Await;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -308,6 +314,7 @@
 		CE323C2922686F33003B49D2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -323,6 +330,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiny2n.Await;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
