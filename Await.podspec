@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = "Await"
-  s.version               = "1.0.1"
+  s.version               = "1.1.2"
   s.homepage              = 'https://github.com/tiny2n/Await.git'
   s.summary               = "Asynchronous Programming with async and await base protocol oriented programming"
   s.license               = { :type => "MIT", :file => "LICENSE" }
