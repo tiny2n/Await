@@ -20,6 +20,7 @@ final public class AwaitTask<Value> {
     }
 }
 
+@discardableResult
 public func await<Value>(_ task: AwaitTask<Value>) throws -> Value {
     return task.await()
 }
